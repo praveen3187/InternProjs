@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:internproj/settings.dart';
+import 'cutsomModelSheet.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key});
@@ -286,9 +287,23 @@ class HomeScreen extends StatelessWidget {
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
-          child: Icon(
-            Icons.add,
-            size: 20,
+         child: GestureDetector(
+            onTap: () {
+              showModalBottomSheet(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(20),
+                        topLeft: Radius.circular(20))),
+                context: context,
+                builder: (context) {
+                 return CustomBottomSheet();
+                },
+              );
+            },
+            child: Icon(
+              Icons.add,
+              size: 20,
+            ),
           ),
           backgroundColor: Color.fromRGBO(59, 155, 103, 1),
         ),

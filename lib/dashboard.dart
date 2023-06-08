@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:internproj/settings.dart';
 
+import 'cutsomModelSheet.dart';
+
 class DashBoard extends StatelessWidget {
   const DashBoard({super.key});
 
@@ -58,7 +60,6 @@ class DashBoard extends StatelessWidget {
                   return ListTile(
                     title: Card(
                         elevation: 8,
-                        margin: EdgeInsets.all(2),
                         child: Container(
                           margin: EdgeInsets.fromLTRB(10, 16, 10, 16),
                           child: Column(
@@ -118,9 +119,23 @@ class DashBoard extends StatelessWidget {
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
-          child: Icon(
-            Icons.add,
-            size: 20,
+          child: GestureDetector(
+            onTap: () {
+              showModalBottomSheet(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(20),
+                        topLeft: Radius.circular(20))),
+                context: context,
+                builder: (context) {
+                 return CustomBottomSheet();
+                },
+              );
+            },
+            child: Icon(
+              Icons.add,
+              size: 20,
+            ),
           ),
           backgroundColor: Color.fromRGBO(59, 155, 103, 1),
         ),
@@ -142,3 +157,9 @@ class DashBoard extends StatelessWidget {
     );
   }
 }
+
+
+
+
+
+
