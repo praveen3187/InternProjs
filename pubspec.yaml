@@ -74,6 +74,7 @@ flutter:
       - assets/images/Home Page.png
       - assets/images/Combo Chart.png
       - assets/images/file.png
+      - assets/images/files.png
       - assets/images/dwnv.png
       - assets/images/settings.png
       - assets/images/greenrect.png
@@ -85,6 +86,8 @@ flutter:
       - assets/images/profile.png
       - assets/images/quesmrk.png
       - assets/images/dot.png
+      - assets/images/dotline.png
+      - assets/images/pig.png
       - assets/images/Logout.png
       - assets/images/home.png
       - assets/images/User Shield.png
@@ -114,8 +117,10 @@ flutter:
     - family: Inter
       fonts:
         - asset: fonts/Inter-Medium.ttf
+        - asset: fonts/Inter-Regular.ttf
     - family: Poppins
       fonts:
+        - asset: fonts/Poppins-Bold.ttf 
         - asset: fonts/Poppins-Medium.ttf    
     - family: OpenSans
       fonts:
