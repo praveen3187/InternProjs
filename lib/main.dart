@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:internproj/dashboard.dart';
 import 'package:internproj/home.dart';
 import 'package:internproj/settings.dart';
+import 'package:internproj/quotation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,8 +16,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-    // home: LoginScreen()
-     home:DashBoard()
+     home: LoginScreen()
+   //  home:DashBoard()
+      //home:Quotation()
     // home:HomeScreen()
     //home:SettingsPage()
       );

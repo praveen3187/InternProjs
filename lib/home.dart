@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:internproj/quotation.dart';
 import 'package:internproj/settings.dart';
 import 'cutsomModelSheet.dart';
 
@@ -315,7 +316,11 @@ class HomeScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Image.asset('assets/images/Home Page.png'),
-              Image.asset('assets/images/paperpen.png'),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Quotation(),));
+                },
+                child: Image.asset('assets/images/paperpen.png')),
               Image.asset('assets/images/Combo Chart.png'),
               Image.asset('assets/images/file.png'),
             ],

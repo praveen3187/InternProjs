@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:internproj/quotation.dart';
 import 'package:internproj/settings.dart';
 
 import 'cutsomModelSheet.dart';
 
-class DashBoard extends StatelessWidget {
-  const DashBoard({super.key});
+class Quotation extends StatelessWidget {
+  const Quotation({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +32,7 @@ class DashBoard extends StatelessWidget {
                   ),
                   Center(
                     child: Text(
-                      'Projects',
+                      'Quotation',
                       style: TextStyle(
                           fontFamily: 'Poppins',
                           fontWeight: FontWeight.w500,
@@ -42,9 +41,9 @@ class DashBoard extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 110,
+                    width: 100,
                   ),
-                  Image.asset('assets/images/files.png'),
+                  Image.asset('assets/images/addquot.png'),
                 ],
               ),
               width: 375,
@@ -56,7 +55,7 @@ class DashBoard extends StatelessWidget {
             Expanded(
               child: ListView.builder(
                 itemCount:
-                    10, // Replace 10 with the actual number of items in your list
+                    1, // Replace 10 with the actual number of items in your list
                 itemBuilder: (BuildContext context, int index) {
                   return ListTile(
                     title: Card(
@@ -66,16 +65,33 @@ class DashBoard extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                'RVKS Construction',
+                              Row(children:[
+                                 Text('RVKS -Quotation',
                                 style: TextStyle(
                                     fontFamily: 'Poppins',
                                     fontWeight: FontWeight.w700,
                                     fontSize: 14,
                                     color: Color.fromRGBO(0, 0, 0, 1)),
                               ),
+                              SizedBox(
+                              width:110
+                              ),
+                              Image.asset('assets/images/eye.png'),
+                              SizedBox(width: 10,),
+                              Image.asset('assets/images/edit.png'),
+                              ]),
+                              SizedBox(height: 5,),
                               Text(
-                                'Laoern ipsum dolor sit amet constar elit',
+                                '12-05-2023',
+                                style: TextStyle(
+                                    fontFamily: 'Inter',
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 12,
+                                    color: Color.fromRGBO(0, 0, 0, 1)),
+                              ),
+                              SizedBox(height:15),
+                               Text(
+                                'Total Area: 5222Sq.ft',
                                 style: TextStyle(
                                     fontFamily: 'Inter',
                                     fontWeight: FontWeight.w400,
@@ -99,13 +115,13 @@ class DashBoard extends StatelessWidget {
                                 ),
                                 Text('6 months'),
                                 SizedBox(
-                                  width: 65,
+                                  width: 80,
                                 ),
-                                Image.asset('assets/images/pig.png'),
+                                Image.asset('assets/images/savings.png'),
                                 SizedBox(
-                                  width: 5,
+                                  width:6,
                                 ),
-                                Text('10lkhs/35lkhs'),
+                                Text('35lkhs'),
                               ])
                             ],
                           ),
@@ -148,11 +164,7 @@ class DashBoard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Image.asset('assets/images/Home Page.png'),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Quotation()));
-                },
-                child: Image.asset('assets/images/paperpen.png')),
+              Image.asset('assets/images/paperpen.png'),
               Image.asset('assets/images/Combo Chart.png'),
               Image.asset('assets/images/file.png'),
             ],
