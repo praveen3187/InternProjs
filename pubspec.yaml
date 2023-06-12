@@ -98,6 +98,7 @@ flutter:
       - assets/images/eye.png
       - assets/images/edit.png
       - assets/images/addquot.png 
+      - assets/images/3lines.png 
 
       
   #   - images/a_dot_burr.jpeg

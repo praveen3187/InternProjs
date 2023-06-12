@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:internproj/home.dart';
+import 'package:internproj/projectdetails.dart';
 import 'package:internproj/quotation.dart';
 import 'package:internproj/settings.dart';
 
@@ -44,7 +46,10 @@ class DashBoard extends StatelessWidget {
                   SizedBox(
                     width: 110,
                   ),
-                  Image.asset('assets/images/files.png'),
+                  GestureDetector( onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: ((context) => DetailsPage())));
+                  },
+                    child: Image.asset('assets/images/files.png')),
                 ],
               ),
               width: 375,
@@ -147,14 +152,20 @@ class DashBoard extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Image.asset('assets/images/Home Page.png'),
+              GestureDetector(
+                 onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
+                },
+                child: Image.asset('assets/images/Home Page.png')),
               GestureDetector(
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>Quotation()));
                 },
                 child: Image.asset('assets/images/paperpen.png')),
-              Image.asset('assets/images/Combo Chart.png'),
-              Image.asset('assets/images/file.png'),
+           
+                Image.asset('assets/images/Combo Chart.png'),
+              GestureDetector(
+                child: Image.asset('assets/images/file.png')),
             ],
           ),
         ),

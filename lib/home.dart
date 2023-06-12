@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:internproj/dashboard.dart';
 import 'package:internproj/quotation.dart';
 import 'package:internproj/settings.dart';
 import 'cutsomModelSheet.dart';
@@ -315,14 +316,22 @@ class HomeScreen extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Image.asset('assets/images/Home Page.png'),
+              GestureDetector(
+                 onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) =>HomeScreen(),));
+                },
+                child: Image.asset('assets/images/Home Page.png')),
               GestureDetector(
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => Quotation(),));
                 },
                 child: Image.asset('assets/images/paperpen.png')),
               Image.asset('assets/images/Combo Chart.png'),
-              Image.asset('assets/images/file.png'),
+              GestureDetector(
+                 onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) =>DashBoard(),));
+                },
+                child: Image.asset('assets/images/file.png')),
             ],
           ),
         ),
